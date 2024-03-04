@@ -8,7 +8,8 @@ player_2_location = 0
 player_1_scrap = 0
 player_2_scrap = 0
 # make lists for both players so they can collect clothes
-
+player_1_list = []
+player_2_list = []
 # which player is playing by doing math
 turn = 0
 
