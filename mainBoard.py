@@ -2,10 +2,13 @@ import random
 
 
 # player location
-player_1 = 0
-player_2 = 0
+player_1_location = 0
+player_2_location = 0
 # starting scrap
+player_1_scrap = 0
+player_2_scrap = 0
 # make lists for both players so they can collect clothes
+
 # which player is playing by doing math
 turn = 0
 
