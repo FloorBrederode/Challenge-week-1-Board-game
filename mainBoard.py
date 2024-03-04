@@ -4,6 +4,8 @@ import random
 # player location
 player_1 = 0
 player_2 = 0
+# starting scrap
+# make lists for both players so they can collect clothes
 # which player is playing by doing math
 turn = 0
 
@@ -15,7 +17,7 @@ def dice():
 
 
 def end_game():
-    game == False
+    ...
 
 
 if __name__ == '__main__':
@@ -24,9 +26,7 @@ if __name__ == '__main__':
     if user_start == 'y':
         ...
     elif user_start == 'n':
-        ...
+        print('Goodbye')
+        endgame()
     else:
         print('Invalid input')
-    # roll = dice()
-    # print(roll)
-
