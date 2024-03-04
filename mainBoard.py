@@ -13,6 +13,8 @@ player_2_list = []
 # which player is playing by doing math
 turn = 0
 
+print("hello world")
+
 # Dice
 def dice():
     roll = random.randint(1,6)
@@ -31,6 +33,7 @@ if __name__ == '__main__':
         ...
     elif user_start == 'n':
         print('Goodbye')
-        endgame()
+        end_game()
     else:
         print('Invalid input')
+
