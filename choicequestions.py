@@ -11,13 +11,30 @@ def questions():
         answer_choice = input('A, B, or C?').lower().strip()
         if answer_choice == 'a':
             print('Correct')
+            choice_question += 1
         elif answer_choice == 'b':
             print('Incorrect')
+            choice_question += 1
         elif answer_choice == 'c':
             print('Incorrect')
+            choice_question += 1
 
     # how much radiation?
-    print('Who invented the nuclear bomb')
+    if choice_question == 1:
+        print('Who invented the nuclear bomb')
+        print('A: Lea Szilard.')
+        print('B: J. Robert Oppenheimer.')
+        print('C: Cillian Murphy.')
+        answer_choice = input('A, B, or C?').lower().strip()
+        if answer_choice == 'a':
+            print('Incorrect')
+            choice_question += 1
+        elif answer_choice == 'b':
+            print('Correct')
+            choice_question += 1
+        elif answer_choice == 'c':
+            print('Incorrect')
+            choice_question += 1
     # correct j. Robert Oppenheimer
     # incorrect Lea Szilard
     # incorrect Cillan Murphy
