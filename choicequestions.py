@@ -1,7 +1,8 @@
 # Multiple choice questions
-choice_question = 0
 
 def questions():
+    choice_question = 0
+
     # How long no food
     if choice_question == 0:
         print('How long can a person go without food?')
@@ -9,15 +10,18 @@ def questions():
         print('B: 21 to 36 Days.')
         print('C: 36 to 45 Days.')
         answer_choice = input('A, B, or C?').lower().strip()
-        if answer_choice == 'a':
-            print('Correct')
-            choice_question += 1
-        elif answer_choice == 'b':
-            print('Incorrect')
-            choice_question += 1
-        elif answer_choice == 'c':
-            print('Incorrect')
-            choice_question += 1
+        while True:
+            if answer_choice == 'a':
+                print('Correct')
+                choice_question += 1
+            elif answer_choice == 'b':
+                print('Incorrect')
+                choice_question += 1
+            elif answer_choice == 'c':
+                print('Incorrect')
+                choice_question += 1
+            else:
+                print('Invalid Input')
 
     # how much radiation?
     if choice_question == 1:
@@ -35,14 +39,29 @@ def questions():
         elif answer_choice == 'c':
             print('Incorrect')
             choice_question += 1
-    # correct j. Robert Oppenheimer
-    # incorrect Lea Szilard
-    # incorrect Cillan Murphy
 
     # mafths
-    print('The radiation level in a certain area dubbles every hour.')
-    print('If the radiation level is initially at 10 millisieverts per hour (mSv/h),')
-    print('what will be the radiation level after 3 hours?')
+    if choice_question == 2:
+        print('The radiation level in a certain area dubbles every hour.')
+        print('If the radiation level is initially at 10 millisieverts per hour (mSv/h),')
+        print('what will be the radiation level after 3 hours?')
+        print('A: 30 millisieverts per hour (mSv/h)')
+        print('B: 40 millisieverts per hour (mSv/h)')
+        print('C: 60 millisieverts per hour (mSv/h)')
+        print('D: 80 millisieverts per hour (mSv/h)')
+        answer_choice = input ('A, B, C, or D').lower().strip()
+        if answer_choice == 'a':
+            print('Incorrect')
+            choice_question += 1
+        elif answer_choice == 'b':
+            print('Correct')
+            choice_question += 1
+        elif answer_choice == 'c':
+            print('Incorrect')
+            choice_question += 1
+        elif answer_choice == 'd':
+            print('Correct')
+            choice_question += 1
     # correct 80 millisieverts per hour (mSv/h)
     # incorrect 40 millisieverts
     # incorrect 60 millisieverts
@@ -54,3 +73,6 @@ def questions():
     # correct a dose of 1000 mSv (millisievert)
     # incorrect a doese of 100 mSv
     # incorrect a dose of 10000 mSv
+
+
+questions()
