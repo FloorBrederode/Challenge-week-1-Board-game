@@ -1,7 +1,8 @@
 # Multiple choice questions
-choice_question = 0
 
 def questions():
+    choice_question = 0
+
     # How long no food
     if choice_question == 0:
         print('How long can a person go without food?')
@@ -9,15 +10,18 @@ def questions():
         print('B: 21 to 36 Days.')
         print('C: 36 to 45 Days.')
         answer_choice = input('A, B, or C?').lower().strip()
-        if answer_choice == 'a':
-            print('Correct')
-            choice_question += 1
-        elif answer_choice == 'b':
-            print('Incorrect')
-            choice_question += 1
-        elif answer_choice == 'c':
-            print('Incorrect')
-            choice_question += 1
+        while True:
+            if answer_choice == 'a':
+                print('Correct')
+                choice_question += 1
+            elif answer_choice == 'b':
+                print('Incorrect')
+                choice_question += 1
+            elif answer_choice == 'c':
+                print('Incorrect')
+                choice_question += 1
+            else:
+                print('Invalid Input')
 
     # how much radiation?
     if choice_question == 1:
@@ -69,3 +73,6 @@ def questions():
     # correct a dose of 1000 mSv (millisievert)
     # incorrect a doese of 100 mSv
     # incorrect a dose of 10000 mSv
+
+
+questions()
