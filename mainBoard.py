@@ -6,9 +6,7 @@ number_question = 0
 question_tiles = 0
 # player location
 player_1_location = 0
-print(player_1_location)
 player_2_location = 0
-print(player_2_location)
 # starting scrap
 player_1_scrap = 0
 player_2_scrap = 0
@@ -47,12 +45,17 @@ if __name__ == '__main__':
             print(f"You rolled a {outcome}")
             if turn % 2 == 0:
                 player_1_location += outcome
-                print(f"Survivor 1 moves {outcome} steps...")               
+                print(player_1_location)
+                print(f"Survivor 1 moves {outcome} steps...")
+                if player_1_location == 3:
+                    question_tiles += 1
+                    choicequestions.questions(question_tiles)               
                 continue
             if turn % 2 == 1:
                 player_2_location += outcome
                 print(f"Survivor 2 moves {outcome} steps...")
-                continue      
+                continue 
+                
     elif user_start == 'n':
         print('Goodbye')
         end_game()
