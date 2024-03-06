@@ -26,8 +26,17 @@ def dice():
 
 def move_player(player_location, outcome):
     player_location += outcome
-    print(f"You move {outcome} steps...")
+    print(f"You move to tile {player_location}")
     return player_location
+
+def player_turn():
+    global player_1_location, player_2_location, turn
+    if turn % 2 == 0:
+        player_1_location = move_player(player_1_location, outcome)
+
+    else:
+        player_2_location = move_player(player_2_location, outcome)
+
 
 def end_game():
     ...
@@ -41,12 +50,12 @@ if __name__ == '__main__':
             roll_prompt = input("Press Enter to roll your dice!")
             input()
             outcome = dice()
-            print(f"You rolled a {outcome}")
-            if turn % 2 == 0:
-                player_1_location = move_player(player_1_location, outcome)
+            print(f"You rolled a {outcome}")           
                 if player_1_location == 3:
                     question_tiles += 1
-                    choicequestions.questions(question_tiles)              
+                    choicequestions.questions(question_tiles) 
+                else:
+                    print("next turn")            
                 continue
             if turn % 2 == 1:
                 continue 
