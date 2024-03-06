@@ -24,14 +24,13 @@ def dice():
     # add to player location
     return roll
 
+def move_player(player_location, outcome):
+    player_location += outcome
+    print(f"You move {outcome} steps...")
+    return player_location
 
 def end_game():
     ...
-
-if player_1_location == 3:
-    question_tiles += 1
-    choicequestions.questions(question_tiles)
-
 
 if __name__ == '__main__':
     print('Welcome to our bordgame')
@@ -44,16 +43,12 @@ if __name__ == '__main__':
             outcome = dice()
             print(f"You rolled a {outcome}")
             if turn % 2 == 0:
-                player_1_location += outcome
-                print(player_1_location)
-                print(f"Survivor 1 moves {outcome} steps...")
+                player_1_location = move_player(player_1_location, outcome)
                 if player_1_location == 3:
                     question_tiles += 1
-                    choicequestions.questions(question_tiles)               
+                    choicequestions.questions(question_tiles)              
                 continue
             if turn % 2 == 1:
-                player_2_location += outcome
-                print(f"Survivor 2 moves {outcome} steps...")
                 continue 
                 
     elif user_start == 'n':
