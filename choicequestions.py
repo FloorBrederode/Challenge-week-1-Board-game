@@ -64,15 +64,45 @@ def questions(number_question):
                 print('Correct')
                 choice_question += 1
                 break
-        # correct 80 millisieverts per hour (mSv/h)
-        # incorrect 40 millisieverts
-        # incorrect 60 millisieverts
-        # incorrect 30 millisieverts
-
 
         # Who invented nuclear bomb
-        print('What is the minimum amout of radiation that will kill you?')
-        # correct a dose of 1000 mSv (millisievert)
-        # incorrect a doese of 100 mSv
-        # incorrect a dose of 10000 mSv
+        if choice_question == 4:
+            print('What is the minimum amout of radiation that will kill you?')
+            print('A: A dose of 100 mSv. (millisievert)')
+            print('B: A dose of 1000 mSv. (millisievert)')
+            print('C: A dose of 10000 mSv. (millisievert)')
 
+
+        # What is the reccomended material for shielnidn against radiation exposure
+        # lead  !!
+        # aluminium
+        # steel
+
+
+        #what is not a symptom id acute radiation
+        #haurloss
+        # nasea and voliting
+        # blindness !!!
+
+        #what type of clothing provides better protecton agains radiation
+        # thick wool
+        # synthetic fibers
+        # lead-lined suits !!!
+
+
+        #which food item is generaly considers safer to consume during a radiation emergency
+        # fresh prodiuce
+        # canned goods !!!
+        # wild game
+
+
+        # which factor contributes to the spread of radiation contamination
+        # wind direction !!!
+        #humidity level
+        #lunar phase
+
+
+        #what type od water source is asafer to consume in a radiated area
+        # running water !!!
+        # rainwater collected in barrel
+        # standing pond
