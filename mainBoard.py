@@ -30,24 +30,25 @@ if __name__ == '__main__':
     print('Welcome to our bordgame')
     user_start = input('Would you like to play? y/n').strip().lower()
     if user_start == 'y':
-        ...
+
+        while True:
+            roll_prompt = input("Press Enter to roll your dice!")
+            input()
+            print(f"you rolled a {dice()}")
+            if turn % 2 == 0:
+                player_1_location += dice()
+                print(f"Survivor 1 moves {dice()} steps...")
+                continue
+            if turn % 2 == 1:
+                player_2_location += dice()
+                print(f"Survivor 2 moves {dice()} steps...")
+                continue
+        
     elif user_start == 'n':
         print('Goodbye')
         end_game()
     else:
         print('Invalid input')
-        
-
-
-    roll_prompt = input("Player type Roll to roll your dice!")
-    if roll_prompt == "Roll":
-        if turn % 2 == 0:
-            player_1_location += dice()
-            print(f"Survivor 1 moves {dice()} steps...")
-            break
-        if turn % 2 == 1:
-            player_2_location += dice()
-            print(f"Survivor 2 moves {dice()} steps...")
         
     
 
