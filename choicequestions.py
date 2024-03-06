@@ -102,11 +102,6 @@ def questions(number_question):
                 choice_question += 1
             break
 
-        # lead  !!
-        # aluminium
-        # steel
-
-
         #what is not a symptom id acute radiation
         if choice_question == 6:
             print('What is not a symptom of acute Radiation Sickness?')
@@ -124,9 +119,6 @@ def questions(number_question):
                 print('Correct')
                 choice_question += 1
             break
-        #haurloss
-        # nasea and voliting
-        # blindness !!!
 
         #what type of clothing provides better protecton agains radiation
         if choice_question == 7:
@@ -145,10 +137,6 @@ def questions(number_question):
                 print('Correct')
                 choice_question += 1
             break
-        # thick wool
-        # synthetic fibers
-        # lead-lined suits !!!
-
 
         #which food item is generaly considers safer to consume during a radiation emergency
         if choice_question == 8:
@@ -166,10 +154,6 @@ def questions(number_question):
                 print('Incorrect')
                 choice_question += 1
             break
-        # fresh prodiuce
-        # canned goods !!!
-        # wild game
-
 
         # which factor contributes to the spread of radiation contamination
         if choice_question == 9:
@@ -187,10 +171,6 @@ def questions(number_question):
                 print('Incorrect')
                 choice_question += 1
             break
-        # wind direction !!!
-        #humidity level
-        #lunar phase
-
 
         #what type od water source is asafer to consume in a radiated area
         if choice_question == 10:
@@ -208,6 +188,4 @@ def questions(number_question):
                 print('Incorrect')
                 choice_question += 1
             break
-        # running water !!!
-        # rainwater collected in barrel
-        # standing pond
+        
