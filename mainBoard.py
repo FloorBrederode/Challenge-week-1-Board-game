@@ -15,6 +15,7 @@ player_1_list = []
 player_2_list = []
 # which player is playing by doing math
 turn = 0
+current_player_turn = True
 
 print("hello world")
 
@@ -34,7 +35,7 @@ def player_turn():
     if turn % 2 == 0:
         player_1_location = move_player(player_1_location, outcome)
 
-    else:
+    if turn % 2 == 1:
         player_2_location = move_player(player_2_location, outcome)
 
 
@@ -47,19 +48,21 @@ if __name__ == '__main__':
     if user_start == 'y':
 
         while True:
+            if not current_player_turn:
+                print("Next Player's turn!")
+            current_player_turn = False
             roll_prompt = input("Press Enter to roll your dice!")
             input()
             outcome = dice()
-            print(f"You rolled a {outcome}")           
-                if player_1_location == 3:
-                    question_tiles += 1
-                    choicequestions.questions(question_tiles) 
-                else:
-                    print("next turn")            
-                continue
-            if turn % 2 == 1:
-                continue 
-                
+            print(f"You rolled a {outcome}")
+            player_turn()          
+            if player_1_location == 3:
+                question_tiles += 1
+                choicequestions.questions(question_tiles)
+            print(player_1_location)  
+            print(player_2_location) 
+            turn += 1            
+            continue                     
     elif user_start == 'n':
         print('Goodbye')
         end_game()
