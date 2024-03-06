@@ -1,16 +1,15 @@
 # Multiple choice questions
 
-def questions():
-    choice_question = 0
-
+def questions(number_question):
+    choice_question = number_question
     # How long no food
-    if choice_question == 0:
+    if choice_question == 1:
         print('How long can a person go without food?')
         print('A: 8 to 21 Days.')
         print('B: 21 to 36 Days.')
         print('C: 36 to 45 Days.')
         answer_choice = input('A, B, or C?').lower().strip()
-        while True:
+        while choice_question == 1:
             if answer_choice == 'a':
                 print('Correct')
                 choice_question += 1
@@ -24,7 +23,7 @@ def questions():
                 print('Invalid Input')
 
     # how much radiation?
-    if choice_question == 1:
+    if choice_question == 2:
         print('Who invented the nuclear bomb')
         print('A: Lea Szilard.')
         print('B: J. Robert Oppenheimer.')
@@ -41,7 +40,7 @@ def questions():
             choice_question += 1
 
     # mafths
-    if choice_question == 2:
+    if choice_question == 3:
         print('The radiation level in a certain area dubbles every hour.')
         print('If the radiation level is initially at 10 millisieverts per hour (mSv/h),')
         print('what will be the radiation level after 3 hours?')
@@ -74,5 +73,4 @@ def questions():
     # incorrect a doese of 100 mSv
     # incorrect a dose of 10000 mSv
 
-
-questions()
+questions(1)
