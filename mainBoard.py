@@ -34,16 +34,16 @@ if __name__ == '__main__':
         while True:
             roll_prompt = input("Press Enter to roll your dice!")
             input()
-            print(f"you rolled a {dice()}")
+            outcome = dice()
+            print(f"You rolled a {outcome}")
             if turn % 2 == 0:
-                player_1_location += dice()
-                print(f"Survivor 1 moves {dice()} steps...")
+                player_1_location += outcome
+                print(f"Survivor 1 moves {outcome} steps...")
                 continue
             if turn % 2 == 1:
-                player_2_location += dice()
-                print(f"Survivor 2 moves {dice()} steps...")
-                continue
-        
+                player_2_location += outcome
+                print(f"Survivor 2 moves {outcome} steps...")
+                continue      
     elif user_start == 'n':
         print('Goodbye')
         end_game()
