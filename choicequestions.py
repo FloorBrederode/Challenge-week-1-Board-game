@@ -35,14 +35,29 @@ def questions():
         elif answer_choice == 'c':
             print('Incorrect')
             choice_question += 1
-    # correct j. Robert Oppenheimer
-    # incorrect Lea Szilard
-    # incorrect Cillan Murphy
 
     # mafths
-    print('The radiation level in a certain area dubbles every hour.')
-    print('If the radiation level is initially at 10 millisieverts per hour (mSv/h),')
-    print('what will be the radiation level after 3 hours?')
+    if choice_question == 2:
+        print('The radiation level in a certain area dubbles every hour.')
+        print('If the radiation level is initially at 10 millisieverts per hour (mSv/h),')
+        print('what will be the radiation level after 3 hours?')
+        print('A: 30 millisieverts per hour (mSv/h)')
+        print('B: 40 millisieverts per hour (mSv/h)')
+        print('C: 60 millisieverts per hour (mSv/h)')
+        print('D: 80 millisieverts per hour (mSv/h)')
+        answer_choice = input ('A, B, C, or D').lower().strip()
+        if answer_choice == 'a':
+            print('Incorrect')
+            choice_question += 1
+        elif answer_choice == 'b':
+            print('Correct')
+            choice_question += 1
+        elif answer_choice == 'c':
+            print('Incorrect')
+            choice_question += 1
+        elif answer_choice == 'd':
+            print('Correct')
+            choice_question += 1
     # correct 80 millisieverts per hour (mSv/h)
     # incorrect 40 millisieverts
     # incorrect 60 millisieverts
