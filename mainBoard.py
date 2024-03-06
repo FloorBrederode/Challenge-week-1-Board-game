@@ -36,4 +36,10 @@ if __name__ == '__main__':
         end_game()
     else:
         print('Invalid input')
+        
+
+while True:
+    roll_prompt = input("type Roll to roll your dice!")
+    jknnvzkvjnxv
+    
 
