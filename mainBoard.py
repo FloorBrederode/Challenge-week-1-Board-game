@@ -38,8 +38,16 @@ if __name__ == '__main__':
         print('Invalid input')
         
 
-while True:
-    roll_prompt = input("type Roll to roll your dice!")
-    jknnvzkvjnxv
+
+    roll_prompt = input("Player type Roll to roll your dice!")
+    if roll_prompt == "Roll":
+        if turn % 2 == 0:
+            player_1_location += dice()
+            print(f"Survivor 1 moves {dice()} steps...")
+            break
+        if turn % 2 == 1:
+            player_2_location += dice()
+            print(f"Survivor 2 moves {dice()} steps...")
+        
     
 
