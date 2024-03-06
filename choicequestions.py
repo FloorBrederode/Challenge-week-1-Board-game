@@ -24,7 +24,7 @@ def questions(number_question):
             break
 
         # Who invented nuclear bomb
-        if choice_question == 2:
+        elif choice_question == 2:
             print('Who invented the nuclear bomb')
             print('A: Lea Szilard.')
             print('B: J. Robert Oppenheimer.')
@@ -42,7 +42,7 @@ def questions(number_question):
             break
 
         # mafths
-        if choice_question == 3:
+        elif choice_question == 3:
             print('The radiation level in a certain area dubbles every hour.')
             print('If the radiation level is initially at 10 millisieverts per hour (mSv/h),')
             print('what will be the radiation level after 3 hours?')
@@ -66,7 +66,7 @@ def questions(number_question):
             break
 
         # how much radiation?
-        if choice_question == 4:
+        elif choice_question == 4:
             print('What is the minimum amout of radiation that will kill you?')
             print('A: A dose of 100 mSv. (millisievert)')
             print('B: A dose of 1000 mSv. (millisievert)')
@@ -85,7 +85,7 @@ def questions(number_question):
 
 
         # What is the reccomended material for shielnidn against radiation exposure
-        if choice_question == 5:
+        elif choice_question == 5:
             print('What is the recommended material for shielding agains radiation exposure?')
             print('A: Lead.')
             print('B: Aluminium.')
@@ -103,7 +103,7 @@ def questions(number_question):
             break
 
         #what is not a symptom id acute radiation
-        if choice_question == 6:
+        elif choice_question == 6:
             print('What is not a symptom of acute Radiation Sickness?')
             print('A: Hairloss.')
             print('B: Nausea and Vomiting.')
@@ -121,7 +121,7 @@ def questions(number_question):
             break
 
         #what type of clothing provides better protecton agains radiation
-        if choice_question == 7:
+        elif choice_question == 7:
             print('What type of clothing provides the best protection agains radiation?')
             print('A: Thick Wool.')
             print('B: Synthetic Fibers.')
@@ -139,7 +139,7 @@ def questions(number_question):
             break
 
         #which food item is generaly considers safer to consume during a radiation emergency
-        if choice_question == 8:
+        elif choice_question == 8:
             print('A: Fresh Produce.')
             print('B: Canned Goods.')
             print('C: Wild Game.')
@@ -156,7 +156,7 @@ def questions(number_question):
             break
 
         # which factor contributes to the spread of radiation contamination
-        if choice_question == 9:
+        elif choice_question == 9:
             print('A: Wind Direction.')
             print('B: Humidity Level.')
             print('C: Lunar Phase.')
@@ -173,7 +173,7 @@ def questions(number_question):
             break
 
         #what type od water source is asafer to consume in a radiated area
-        if choice_question == 10:
+        elif choice_question == 10:
             print('A: Running Water.')
             print('B: Rainwater collected in Barrels')
             print('C: Water in Standing Ponds.')
@@ -188,4 +188,3 @@ def questions(number_question):
                 print('Incorrect')
                 choice_question += 1
             break
-        
