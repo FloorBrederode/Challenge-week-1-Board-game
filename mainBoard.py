@@ -1,8 +1,9 @@
 import random
+import choicequestions
 
 number_question = 0
 
-question_tiles = 1
+question_tiles = 0
 # player location
 player_1_location = 0
 print(player_1_location)
@@ -28,6 +29,10 @@ def dice():
 
 def end_game():
     ...
+
+if player_1_location == 3:
+    question_tiles += 1
+    choicequestions.questions(question_tiles)
 
 
 if __name__ == '__main__':
