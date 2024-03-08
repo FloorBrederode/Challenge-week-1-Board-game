@@ -11,8 +11,11 @@ def questions(number_question):
             print('C: 36 to 45 Days.')
             answer_choice = input('A, B, or C? ').lower().strip()
             if answer_choice == 'a':
-                print('Correct')
+                print('''Correct!
+                You recieve: 10 scrap''')
+                reward = 10
                 choice_question += 1
+                return reward
             elif answer_choice == 'b':
                 print('Incorrect')
                 choice_question += 1
@@ -34,8 +37,11 @@ def questions(number_question):
                 print('Incorrect')
                 choice_question += 1
             elif answer_choice == 'b':
-                print('Correct')
+                print('''Correct
+                You recieve: 10 scrap''')
+                reward = 10
                 choice_question += 1
+                return reward
             elif answer_choice == 'c':
                 print('Incorrect')
                 choice_question += 1
@@ -55,8 +61,11 @@ def questions(number_question):
                 print('Incorrect')
                 choice_question += 1
             elif answer_choice == 'b':
-                print('Correct')
+                print('''Correct
+                You recieve: 10 scrap''')
+                reward = 10
                 choice_question += 1
+                return reward
             elif answer_choice == 'c':
                 print('Incorrect')
                 choice_question += 1
@@ -76,8 +85,11 @@ def questions(number_question):
                 print('Incorrect')
                 choice_question += 1
             elif answer_choice == 'b':
-                print('Correct')
+                print('''Correct
+                You recieve: 10 scrap''')
+                reward = 10
                 choice_question += 1
+                return reward
             elif answer_choice == 'c':
                 print('Incorrect')
                 choice_question += 1
@@ -92,8 +104,11 @@ def questions(number_question):
             print('C: Steel.')
             answer_choice = input ('A, B, or C? ').lower().strip()
             if answer_choice == 'a':
-                print('Correct')
+                print('''Correct
+                You recieve: 10 scrap''')
+                reward = 10
                 choice_question += 1
+                return reward
             elif answer_choice == 'b':
                 print('Incorrect')
                 choice_question += 1
@@ -116,8 +131,11 @@ def questions(number_question):
                 print('Incorrect')
                 choice_question += 1
             elif answer_choice == 'c':
-                print('Correct')
+                print('''Correct
+                You recieve: 10 scrap''')
+                reward = 10
                 choice_question += 1
+                return reward
             break
 
         #what type of clothing provides better protecton agains radiation
@@ -134,8 +152,11 @@ def questions(number_question):
                 print('Incorrect')
                 choice_question += 1
             elif answer_choice == 'c':
-                print('Correct')
+                print('''Correct
+                You recieve: 10 scrap''')
+                reward = 10
                 choice_question += 1
+                return reward
             break
 
         #which food item is generaly considers safer to consume during a radiation emergency
@@ -148,8 +169,11 @@ def questions(number_question):
                 print('Incorrect')
                 choice_question += 1
             elif answer_choice == 'b':
-                print('Correct')
+                print('''Correct
+                You recieve: 10 scrap''')
+                reward = 10
                 choice_question += 1
+                return reward
             elif answer_choice == 'c':
                 print('Incorrect')
                 choice_question += 1
@@ -162,8 +186,11 @@ def questions(number_question):
             print('C: Lunar Phase.')
             answer_choice = input ('A, B, or C? ').lower().strip()
             if answer_choice == 'a':
-                print('Correct')
+                print('''Correct
+                You recieve: 10 scrap''')
+                reward = 10
                 choice_question += 1
+                return reward
             elif answer_choice == 'b':
                 print('Incorrect')
                 choice_question += 1
@@ -179,8 +206,11 @@ def questions(number_question):
             print('C: Water in Standing Ponds.')
             answer_choice = input ('A, B, or C? ').lower().strip()
             if answer_choice == 'a':
-                print('Correct')
+                print('''Correct
+                You recieve: 10 scrap''')
+                reward = 10
                 choice_question += 1
+                return reward
             elif answer_choice == 'b':
                 print('Incorrect')
                 choice_question += 1
