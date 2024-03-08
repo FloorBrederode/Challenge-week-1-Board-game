@@ -1,5 +1,6 @@
 import random
 import choicequestions
+import os
 
 number_question = 0
 
@@ -32,9 +33,13 @@ def move_player(player_location, outcome):
 def player_turn():
     global player_1_location, player_2_location, turn
     if turn % 2 == 0:
+        print('Player 1')
+        print(f"You rolled a {outcome}")
         player_1_location = move_player(player_1_location, outcome)
 
     if turn % 2 == 1:
+        print('Player 2')
+        print(f"You rolled a {outcome}")
         player_2_location = move_player(player_2_location, outcome)
 
 
@@ -48,22 +53,21 @@ if __name__ == '__main__':
                 print("Next Player's turn!")
             current_player_turn = False
             roll_prompt = input("Press Enter to roll your dice!")
-            input()
             outcome = dice()
-            print(f"You rolled a {outcome}")
+            os.system('cls')
             player_turn()          
             if player_1_location in [5, 21, 36, 48, 66, 76, ]:
                 question_tiles += 1
                 reward = choicequestions.questions(question_tiles)
                 player_1_scrap += reward
-                print(player_1_scrap)
+                print(f'You now have {player_1_scrap} scrap.')
             if player_2_location in [5, 21, 36, 48, 66, 76, ]:
                 question_tiles += 1
                 reward = choicequestions.questions(question_tiles)
                 player_1_scrap += reward
-                print(player_1_scrap)
-            print(player_1_location)  
-            print(player_2_location) 
+                print(f'You now have {player_1_scrap} scrap.')
+            print(f'Player 1 location: Tile {player_1_location}')  
+            print(f'Player 2 location: Tile {player_2_location}') 
             turn += 1            
             continue                     
     elif user_start == 'n':
