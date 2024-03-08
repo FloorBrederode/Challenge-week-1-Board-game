@@ -58,7 +58,9 @@ if __name__ == '__main__':
             player_turn()          
             if player_1_location == 3:
                 question_tiles += 1
-                choicequestions.questions(question_tiles)
+                reward = choicequestions.questions(question_tiles)
+                player_1_scrap += reward
+                print(player_1_scrap)
             print(player_1_location)  
             print(player_2_location) 
             turn += 1            
