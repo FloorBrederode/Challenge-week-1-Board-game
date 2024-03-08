@@ -7,15 +7,7 @@ number_question = 0
 
 question_tiles = 0
 
-# starting scrap
-player_1_scrap = 100
-player_2_scrap = 0
-# make lists for both players so they can collect clothes
-player_1_list = []
-player_2_list = []
-# which player is playing by doing math
-turn = 0
-current_player_turn = True
+
 # Types of tiles
 multiple_choice_tiles = [5, 21, 36, 48, 66, 76]
 shop_tiles = [10, 20, 30, 40, 50, 60, 70, 80, 90]
@@ -60,10 +52,11 @@ def player_turn():
                 if store_answer == 'y':
                     items_bought = shop.shop(player_1_scrap)
                     print(items_bought)
-                    player_1_scrap = int(items_bought[0])
-                    print(player_1_scrap)
-                    player_1_list.append(items_bought[1])
-                    print(player_1_list)
+                    if len(items_bought) == 2:
+                        player_1_scrap = int(items_bought[0])
+                        print(player_1_scrap)
+                        player_1_list.append(items_bought[1])
+                        print(player_1_list)
                     break
                 elif store_answer == 'n':
                     break
@@ -119,10 +112,11 @@ def player_turn():
                 if store_answer == 'y':
                     items_bought = shop.shop(player_2_scrap)
                     print(items_bought)
-                    player_2_scrap = int(items_bought[0])
-                    print(player_2_scrap)
-                    player_2_list.append(items_bought[1])
-                    print(player_2_list)
+                    if len(items_bought) == 2:
+                        player_2_scrap = int(items_bought[0])
+                        print(player_2_scrap)
+                        player_2_list.append(items_bought[1])
+                        print(player_2_list)
                     break
                 elif store_answer == 'n':
                     break
@@ -167,6 +161,15 @@ if __name__ == '__main__':
             # player location
             player_1_location = 1
             player_2_location = 1
+            # starting scrap
+            player_1_scrap = 100
+            player_2_scrap = 0
+            # make lists for both players so they can collect clothes
+            player_1_list = []
+            player_2_list = []
+            # which player is playing by doing math
+            turn = 0
+            current_player_turn = True
 
             while player_1_location < 100 and player_2_location < 100:
                 if not current_player_turn:
