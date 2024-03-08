@@ -2,6 +2,9 @@
 
 def questions(number_question):
     choice_question = number_question
+    print('''You land on a mulitple choice question tile.
+    press enter to continue.''')
+    input()
     while True:
         # How long no food
         if choice_question == 1:
@@ -13,18 +16,25 @@ def questions(number_question):
             if answer_choice == 'a':
                 print('''Correct!
                 You recieve: 10 scrap''')
-                reward = 10
                 choice_question += 1
+                reward = 10
                 return reward
+                break
             elif answer_choice == 'b':
                 print('Incorrect')
                 choice_question += 1
+                reward = 0
+                return reward
+                break
             elif answer_choice == 'c':
                 print('Incorrect')
                 choice_question += 1
+                reward = 0
+                return reward
+                break
             else:
                 print('Invalid Input')
-            break
+                input()
 
         # Who invented nuclear bomb
         elif choice_question == 2:
@@ -36,16 +46,25 @@ def questions(number_question):
             if answer_choice == 'a':
                 print('Incorrect')
                 choice_question += 1
+                reward = 0
+                return reward
+                break
             elif answer_choice == 'b':
                 print('''Correct
-                You recieve: 10 scrap''')
-                reward = 10
+                You recieve: 5 scrap''')
                 choice_question += 1
+                reward = 5
                 return reward
+                break
             elif answer_choice == 'c':
                 print('Incorrect')
                 choice_question += 1
-            break
+                reward = 0
+                return reward
+                break
+            else:
+                print('Invalid Input')
+                input()
 
         # mafths
         elif choice_question == 3:
@@ -60,19 +79,32 @@ def questions(number_question):
             if answer_choice == 'a':
                 print('Incorrect')
                 choice_question += 1
-            elif answer_choice == 'b':
-                print('''Correct
-                You recieve: 10 scrap''')
-                reward = 10
-                choice_question += 1
+                reward = 0
                 return reward
+                break
+            elif answer_choice == 'b':
+                print('Incorrect')
+                choice_question += 1
+                reward = 0
+                return reward
+                break
             elif answer_choice == 'c':
                 print('Incorrect')
                 choice_question += 1
+                reward = 0
+                return reward
+                break
             elif answer_choice == 'd':
-                print('Correct')
+                print('''Correct
+                You recieve: 10 scrap''')
                 choice_question += 1
-            break
+                reward = 10
+                return reward
+                break
+            else:
+                print('Invalid Input')
+                input()
+
 
         # how much radiation?
         elif choice_question == 4:
@@ -84,16 +116,26 @@ def questions(number_question):
             if answer_choice == 'a':
                 print('Incorrect')
                 choice_question += 1
+                reward = 0
+                return reward
+                break
             elif answer_choice == 'b':
                 print('''Correct
-                You recieve: 10 scrap''')
-                reward = 10
+                You recieve: 15 scrap''')
                 choice_question += 1
+                reward = 15
                 return reward
+                break
             elif answer_choice == 'c':
                 print('Incorrect')
                 choice_question += 1
-            break
+                reward = 0
+                return reward
+                break
+            else:
+                print('Invalid Input')
+                input()
+
 
 
         # What is the reccomended material for shielnidn against radiation exposure
@@ -106,16 +148,26 @@ def questions(number_question):
             if answer_choice == 'a':
                 print('''Correct
                 You recieve: 10 scrap''')
-                reward = 10
                 choice_question += 1
+                reward = 10
                 return reward
+                break
             elif answer_choice == 'b':
                 print('Incorrect')
                 choice_question += 1
+                reward = 0
+                return reward
+                break
             elif answer_choice == 'c':
                 print('Incorrect')
                 choice_question += 1
-            break
+                reward = 0
+                return reward
+                break
+            else:
+                print('Invalid Input')
+                input()
+
 
         #what is not a symptom id acute radiation
         elif choice_question == 6:
@@ -127,16 +179,27 @@ def questions(number_question):
             if answer_choice == 'a':
                 print('Incorrect')
                 choice_question += 1
+                reward = 0
+                return reward
+                break
             elif answer_choice == 'b':
                 print('Incorrect')
                 choice_question += 1
+                reward = 0
+                return reward
+                break
             elif answer_choice == 'c':
                 print('''Correct
-                You recieve: 10 scrap''')
-                reward = 10
+                You recieve: 5 scrap''')
                 choice_question += 1
+                reward = 5
                 return reward
-            break
+                break
+            else:
+                print('Invalid Input')
+                input()
+
+
 
         #what type of clothing provides better protecton agains radiation
         elif choice_question == 7:
@@ -148,16 +211,26 @@ def questions(number_question):
             if answer_choice == 'a':
                 print('Incorrect')
                 choice_question += 1
+                reward = 0
+                return reward
+                break
             elif answer_choice == 'b':
                 print('Incorrect')
                 choice_question += 1
+                reward = 0
+                return reward
+                break
             elif answer_choice == 'c':
                 print('''Correct
                 You recieve: 10 scrap''')
-                reward = 10
                 choice_question += 1
+                reward = 10
                 return reward
-            break
+                break
+            else:
+                print('Invalid Input')
+                input()
+
 
         #which food item is generaly considers safer to consume during a radiation emergency
         elif choice_question == 8:
@@ -168,16 +241,26 @@ def questions(number_question):
             if answer_choice == 'a':
                 print('Incorrect')
                 choice_question += 1
+                reward = 0
+                return reward
+                break
             elif answer_choice == 'b':
                 print('''Correct
                 You recieve: 10 scrap''')
-                reward = 10
                 choice_question += 1
+                reward = 10
                 return reward
+                break
             elif answer_choice == 'c':
                 print('Incorrect')
                 choice_question += 1
-            break
+                reward = 0
+                return reward
+                break
+            else:
+                print('Invalid Input')
+                input()
+
 
         # which factor contributes to the spread of radiation contamination
         elif choice_question == 9:
@@ -188,16 +271,26 @@ def questions(number_question):
             if answer_choice == 'a':
                 print('''Correct
                 You recieve: 10 scrap''')
-                reward = 10
                 choice_question += 1
+                reward = 10
                 return reward
+                break
             elif answer_choice == 'b':
                 print('Incorrect')
                 choice_question += 1
+                reward = 0
+                return reward
+                break
             elif answer_choice == 'c':
                 print('Incorrect')
                 choice_question += 1
-            break
+                reward = 0
+                return reward
+                break
+            else:
+                print('Invalid Input')
+                input()
+
 
         #what type od water source is asafer to consume in a radiated area
         elif choice_question == 10:
@@ -208,13 +301,23 @@ def questions(number_question):
             if answer_choice == 'a':
                 print('''Correct
                 You recieve: 10 scrap''')
-                reward = 10
                 choice_question += 1
+                reward = 10
                 return reward
+                break
             elif answer_choice == 'b':
                 print('Incorrect')
                 choice_question += 1
+                reward = 0
+                return reward
+                break
             elif answer_choice == 'c':
                 print('Incorrect')
                 choice_question += 1
-            break
+                reward = 0
+                return reward
+                break
+            else:
+                print('Invalid Input')
+                input()
+

@@ -5,8 +5,8 @@ number_question = 0
 
 question_tiles = 0
 # player location
-player_1_location = 0
-player_2_location = 0
+player_1_location = 1
+player_2_location = 1
 # starting scrap
 player_1_scrap = 0
 player_2_scrap = 0
@@ -17,7 +17,6 @@ player_2_list = []
 turn = 0
 current_player_turn = True
 
-print("hello world")
 
 # Dice
 def dice():
@@ -39,12 +38,9 @@ def player_turn():
         player_2_location = move_player(player_2_location, outcome)
 
 
-def end_game():
-    ...
-
 if __name__ == '__main__':
     print('Welcome to our bordgame')
-    user_start = input('Would you like to play? y/n').strip().lower()
+    user_start = input('Would you like to play? y/n ').strip().lower()
     if user_start == 'y':
 
         while True:
@@ -56,7 +52,12 @@ if __name__ == '__main__':
             outcome = dice()
             print(f"You rolled a {outcome}")
             player_turn()          
-            if player_1_location == 3:
+            if player_1_location in [5, 21, 36, 48, 66, 76, ]:
+                question_tiles += 1
+                reward = choicequestions.questions(question_tiles)
+                player_1_scrap += reward
+                print(player_1_scrap)
+            if player_2_location in [5, 21, 36, 48, 66, 76, ]:
                 question_tiles += 1
                 reward = choicequestions.questions(question_tiles)
                 player_1_scrap += reward
@@ -67,7 +68,6 @@ if __name__ == '__main__':
             continue                     
     elif user_start == 'n':
         print('Goodbye')
-        end_game()
     else:
         print('Invalid input')
         
