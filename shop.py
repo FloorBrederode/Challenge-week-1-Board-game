@@ -61,10 +61,12 @@ def shop(player_scrap):
                 break
             elif player_buying == 'l':
                 print('Goodbye')
+                return ('nothing')
                 break
             else:
                 print('We dont sell that.')
             print('Goodbye!')
+            return ('nothing')
             break
 
 
