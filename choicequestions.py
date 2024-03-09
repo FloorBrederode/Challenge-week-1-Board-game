@@ -340,32 +340,30 @@ def questions(number_question):
             if answer_choice == 'a':
                 print('''Correct
                 You recieve 15 scrap.''')
-                choice_question += 1
+                choice_question = 0
                 reward = 15
                 return reward
                 break
             elif answer_choice == 'b':
                 print('Incorrect')
-                choice_question += 1
+                choice_question = 0
                 reward = 0
                 return reward
                 break
             elif answer_choice == 'c':
                 print('Incorrect')
-                choice_question += 1
+                choice_question = 0
                 reward = 0
                 return reward
                 break
             elif answer_choice == 'd':
                 print('Incorrect')
-                choice_question += 1
+                choice_question = 0
                 return reward
                 break
             else:
                 print('Invalid Input')
                 input()
 
-        if choice_question == 11:
-            choice_question = 0
 
 

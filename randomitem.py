@@ -3,7 +3,7 @@ import random
 
 
 def random_item():
-    items = ['hat', 'shirt', 'pants', 'shoes', 'extra roll', 'scrap']
+    items = ['hat', 'shirt', 'pants', 'shoes', 'scrap']
     random_item = random.choice(items)
 
     if random_item == 'hat':
@@ -13,8 +13,6 @@ def random_item():
     elif random_item == 'pants':
         return random_item
     elif random_item == 'shoes':
-        return random_item
-    elif random_item == 'extra roll':
         return random_item
     elif random_item == 'scrap':
         amount = random.randint(1,25)

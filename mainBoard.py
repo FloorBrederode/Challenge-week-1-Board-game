@@ -1,6 +1,9 @@
 import random
+
 import choicequestions
 import shop
+import randomitem
+
 import os
 
 number_question = 0
@@ -11,6 +14,7 @@ question_tiles = 0
 # Types of tiles
 multiple_choice_tiles = [5, 21, 36, 48, 66, 76]
 shop_tiles = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+random_item = [12, 43, 57, 77, +92]
 
 
 # Dice
@@ -66,25 +70,47 @@ def player_turn():
         # snakes
         elif player_1_location == 45:
             print('''
-            OH NO.
+            OH NO!
             You landed on a snake tile.
             You go back to tile 27.
             ''')
             player_1_location = 27
         elif player_1_location == 68:
             print('''
-            OH NO.
+            OH NO!
             You landed on a snake tile.
             You go back to tile 54.
             ''')
             player_1_location = 54
+        elif player_1_location == 82:
+            print('''
+            OH NO!
+            You landed on a snake tile.
+            You go back to tile 61.
+            ''')
+            player_1_location = 61
         elif player_1_location == 96:
             print('''
-            OH NO.
+            OH NO!
             You landed on a snake tile.
             You go back to tile 75.
             ''')
             player_1_location = 75
+
+        # # Random item
+        # elif player_1_location in random_item:
+        #     item_given = randomitem.random_item()
+        #     item_given_list = [item_given]
+        #     print(f'''
+        #     You land on a random item tile.
+        #     You get: {item_given}''')
+        #     print(item_given)
+        #     if item_given_list[0] == '\'scrap\'':
+        #         player_1_scrap += int(item_given_list[1])
+        #         print(player_1_scrap)
+        #     else:
+        #         player_1_list.append(item_given)
+        #         print(player_1_list)
 
     # player 2
     global player_2_list, player_2_location, player_2_scrap
@@ -126,25 +152,36 @@ def player_turn():
         # snakes
         elif player_2_location == 45:
             print('''
-            OH NO.
+            OH NO!
             You landed on a snake tile.
             You go back to tile 27.
             ''')
             player_2_location = 27
         elif player_2_location == 68:
             print('''
-            OH NO.
+            OH NO!
             You landed on a snake tile.
             You go back to tile 54.
             ''')
             player_2_location = 54
+        elif player_2_location == 82:
+            print('''
+            OH NO!
+            You landed on a snake tile.
+            You go back to tile 61.
+            ''')
+            player_2_location = 61
         elif player_2_location == 96:
             print('''
-            OH NO.
+            OH NO!
             You landed on a snake tile.
             You go back to tile 75.
             ''')
             player_2_location = 75
+
+        # Random item
+        elif player_2_location in random_item:
+            ...
         
 
 
@@ -162,7 +199,7 @@ if __name__ == '__main__':
             player_1_location = 1
             player_2_location = 1
             # starting scrap
-            player_1_scrap = 100
+            player_1_scrap = 0
             player_2_scrap = 0
             # make lists for both players so they can collect clothes
             player_1_list = []
