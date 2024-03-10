@@ -226,6 +226,7 @@ if __name__ == '__main__':
             current_player_turn = True
 
             while player_1_location < 100 and player_2_location < 100:
+                boardvisual.visualize_board(player_1_location, player_2_location)
                 if not current_player_turn:
                     print("Next Player's turn!")
                 current_player_turn = False
