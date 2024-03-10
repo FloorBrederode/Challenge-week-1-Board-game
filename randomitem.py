@@ -15,9 +15,3 @@ def random_item():
     elif random_item == 'shoes':
         return random_item
 
-
-
-
-
-
-print(random_item())

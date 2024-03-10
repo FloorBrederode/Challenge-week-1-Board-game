@@ -14,7 +14,7 @@ question_tiles = 0
 # Types of tiles
 multiple_choice_tiles = [5, 21, 36, 48, 66, 76]
 shop_tiles = [10, 20, 30, 40, 50, 60, 70, 80, 90]
-random_item = [12, 43, 57, 77, +92]
+random_item = [12, 43, 57, 77, 92]
 chance_tiles = [8, 24, 41, 64, 85, 94]
 
 
@@ -105,20 +105,16 @@ def player_turn():
             ''')
             player_1_location = 75
 
-        # # Random item
-        # elif player_1_location in random_item:
-        #     item_given = randomitem.random_item()
-        #     item_given_list = [item_given]
-        #     print(f'''
-        #     You land on a random item tile.
-        #     You get: {item_given}''')
-        #     print(item_given)
-        #     if item_given_list[0] == '\'scrap\'':
-        #         player_1_scrap += int(item_given_list[1])
-        #         print(player_1_scrap)
-        #     else:
-        #         player_1_list.append(item_given)
-        #         print(player_1_list)
+        # Random item
+        elif player_1_location in random_item:
+            item_given = randomitem.random_item()
+            item_given_list = [item_given]
+            print(f'''
+            You land on a random item tile.
+            You get: {item_given}''')
+            print(item_given)
+            player_1_list.append(item_given)
+            print(player_1_list)
 
     # player 2
     global player_2_list, player_2_location, player_2_scrap
@@ -195,7 +191,14 @@ def player_turn():
 
         # Random item
         elif player_2_location in random_item:
-            ...
+            item_given = randomitem.random_item()
+            item_given_list = [item_given]
+            print(f'''
+            You land on a random item tile.
+            You get: {item_given}''')
+            print(item_given)
+            player_2_list.append(item_given)
+            print(player_2_list)
         
 
 
