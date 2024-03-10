@@ -3,9 +3,9 @@ import random
 
 
 def random_item():
-    items = ['hat', 'shirt', 'pants', 'shoes', 'scrap']
-    random_item = random.choice(items)
-
+    items = ['hat', 'shirt', 'pants', 'shoes']
+    chosen_item = random.choice(items)
+    random_item = chosen_item
     if random_item == 'hat':
         return random_item
     elif random_item == 'shirt':
@@ -14,12 +14,6 @@ def random_item():
         return random_item
     elif random_item == 'shoes':
         return random_item
-    elif random_item == 'scrap':
-        amount = random.randint(1,25)
-        print(f'You get {amount} scrap')
-        print(random_item)
-        print(amount)
-        return random_item, amount
 
 
 
