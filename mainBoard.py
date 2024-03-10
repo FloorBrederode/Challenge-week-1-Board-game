@@ -1,5 +1,5 @@
 import random
-
+import Chance
 import choicequestions
 import shop
 import randomitem
@@ -15,6 +15,7 @@ question_tiles = 0
 multiple_choice_tiles = [5, 21, 36, 48, 66, 76]
 shop_tiles = [10, 20, 30, 40, 50, 60, 70, 80, 90]
 random_item = [12, 43, 57, 77, +92]
+chance_tiles = [8, 24, 41, 64, 85, 94]
 
 
 # Dice
@@ -66,6 +67,13 @@ def player_turn():
                     break
                 else:
                     print('Invalid input')
+
+        # Chance encounters
+        elif player_1_location in chance_tiles: 
+            print("event!")
+            chance_number += 1
+            Chance.chance(chance_number)
+
 
         # snakes
         elif player_1_location == 45:
