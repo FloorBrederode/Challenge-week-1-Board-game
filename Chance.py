@@ -1,7 +1,7 @@
 
 def chance(chance_number):
-    chance_type = chance_number
-
+    #global turn
+    
     while True:
 
     # mom hurts you, you lose scrap
@@ -20,7 +20,6 @@ def chance(chance_number):
                 print('You walk away.')
                 reward = 0
                 return reward
-                break
             else:
                 print('Invalid input')
         # mom is nice you gain scrap
@@ -39,7 +38,6 @@ def chance(chance_number):
                 print('You walk away.')
                 reward = 0
                 return reward
-                break
             else:
                 print('Invalid input')
         # you see something shiny on the ground, pick it up? knife, you cut your finger
@@ -48,9 +46,10 @@ def chance(chance_number):
             Do you pick it up? y/n ''')
             if player_choice == 'y':
                 print('''You try to pick the item up,
-                it hurts your finger.
-                Skip a turn to fix your finger''')
-                # skip a turn
+                It's a gas mask!
+                you can keep going for a while longer now.''')
+                # extra turn
+
                 reward = 0
                 return reward
             elif player_choice == 'n':
@@ -71,6 +70,7 @@ def chance(chance_number):
                 They taste fine,
                 you\'re not hungry anymore.
                 You roll again''')
+
                 reward = 0
                 return reward
                 # extra turn
@@ -88,9 +88,9 @@ def chance(chance_number):
             Do you try to jump over it? y/n ''')
             if player_choice == 'y':
                 print('''You try to jump over the hole,
-                you dont jump over the hole.
-                Skip a turn to get out.''')
-                reward = 0
+                you barely make it, but lose your backpack in the process...
+                you lose 20 scrap.''')
+                reward = -20
                 return reward
                 # skip turn
             elif player_choice == 'n':
@@ -99,7 +99,7 @@ def chance(chance_number):
                 return reward
             else:
                 print('''Invalid input''')
-        #somthing on the ground
+        #something on the ground
         elif chance_number == 6:
             player_choice = input('''You see something on the ground,
             do you try to pick it up? y/n ''')

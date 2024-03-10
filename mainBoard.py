@@ -7,7 +7,7 @@ import boardvisual
 import os
 
 number_question = 0
-chance_number = 0
+chance_number = 1
 question_tiles = 0
 
 
@@ -226,7 +226,6 @@ if __name__ == '__main__':
             current_player_turn = True
 
             while player_1_location < 100 and player_2_location < 100:
-                boardvisual.visualize_board(player_1_location, player_2_location)
                 if not current_player_turn:
                     print("Next Player's turn!")
                 current_player_turn = False
@@ -235,12 +234,18 @@ if __name__ == '__main__':
                 os.system('cls')
                 player_turn()
 
+                # visual of the board
+                player_1_tile = f'{player_1_location}'
+                player_2_tile = f'{player_2_location}'
+                boardvisual.visualize_board(player_1_tile, player_2_tile)
+
                 #scrap can't fall below 0
                 if player_1_scrap < 0:
                     player_1_scrap = 0 
                 if player_2_scrap < 0:
                     player_2_scrap = 0
-
+                
+                
                 print(f'Player 1 location: Tile {player_1_location}')  
                 print(f'Player 2 location: Tile {player_2_location}') 
                 turn += 1            
