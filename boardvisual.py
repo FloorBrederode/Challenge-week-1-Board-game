@@ -1,6 +1,7 @@
-def visualize_board():
-    for i in range(10, 0, -1):  # Rows
-        for j in range(1, 11):   # Columns
+
+def visualize_board(player_1_location, player_2_location):
+    for i in range(10, 0, -1):
+        for j in range(1, 11):
             if i % 2 == 1:
                 tile_num = (i - 1) * 10 + j
             else:
@@ -12,5 +13,5 @@ def visualize_board():
                 print("P2", end="\t")
             else:
                 print(tile_num, end="\t")
-                
+
     print("\n")
