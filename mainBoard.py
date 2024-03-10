@@ -7,7 +7,7 @@ import randomitem
 import os
 
 number_question = 0
-
+chance_number = 0
 question_tiles = 0
 
 
