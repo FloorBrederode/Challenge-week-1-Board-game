@@ -3,7 +3,7 @@ import Chance
 import choicequestions
 import shop
 import randomitem
-
+import boardvisual
 import os
 
 number_question = 0
