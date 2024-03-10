@@ -72,12 +72,12 @@ def selling(player_scrap, player_inventory):
             You don\'t have shoes.''')
             elif item_to_sell == 'e':
                 print('Goodbye.')
-                break
+                return 'nothing'
             else:
-                print('Invalid input')
+                print('Invalid input 1')
         elif player_answer == 'n':
             print('Goodbye.')
-            break
+            return 'nothing'
         else:
-            print('Invalid input')
+            print('Invalid input 2')
 

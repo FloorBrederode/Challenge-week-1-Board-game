@@ -1,19 +1,20 @@
 import random
+
 import Chance
 import choicequestions
 import shop
+import selling
 import randomitem
 import boardvisual
+
 import os
 
-number_question = 0
-chance_number = 1
-question_tiles = 0
 
 
 # Types of tiles
 multiple_choice_tiles = [5, 21, 36, 48, 66, 76]
-shop_tiles = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+shop_tiles = [10, 30, 50, 70, 90]
+sell_tiles = [20, 40, 60, 80]
 random_item = [12, 43, 57, 77, 92]
 chance_tiles = [8, 24, 41, 64, 85, 94]
 
@@ -33,7 +34,7 @@ def player_turn():
     global turn, question_tiles
 
     # player 1
-    global player_1_location, player_1_scrap, chance_number
+    global player_1_location, player_1_scrap, chance_number, player_1_list
     if turn % 2 == 0:
         print('Player 1')
         print(f"You rolled a {outcome}")
@@ -67,6 +68,26 @@ def player_turn():
                     break
                 else:
                     print('Invalid input')
+
+        # Pawn Shop
+        elif player_1_location in sell_tiles:
+
+            while True:
+                pawn_shop_answer = input('''
+                You land on a pawn shop tile.
+                Do you enter? y/n ''').lower().strip()
+
+                if pawn_shop_answer == 'y':
+                    new_items = selling.selling(player_1_scrap, player_1_list)
+                    if len(new_items) == 2:
+                        player_1_list = new_items[0]
+                        player_1_scrap = new_items [1]
+                        break
+                elif pawn_shop_answer == 'n':
+                    break
+                else:
+                    print('Invalid input')
+
 
         # Chance encounters
         elif player_1_location in chance_tiles: 
@@ -153,6 +174,25 @@ def player_turn():
                 else:
                     print('Invalid input')
 
+        # Pawn Shop
+        elif player_2_location in sell_tiles:
+
+            while True:
+                pawn_shop_answer = input('''
+                You land on a pawn shop tile.
+                Do you enter? y/n ''').lower().strip()
+
+                if pawn_shop_answer == 'y':
+                    new_items = selling.selling(player_2_scrap, player_2_list)
+                    if len(new_items) == 2:
+                        player_2_list = new_items[0]
+                        player_2_scrap = new_items [1]
+                        break
+                elif pawn_shop_answer == 'n':
+                    break
+                else:
+                    print('Invalid input')
+
         # Chance encounters
         elif player_2_location in chance_tiles: 
             player_2_scrap += Chance.chance(chance_number)
@@ -224,6 +264,10 @@ if __name__ == '__main__':
             # which player is playing by doing math
             turn = 0
             current_player_turn = True
+
+            number_question = 0
+            chance_number = 1
+            question_tiles = 0
 
             while player_1_location < 100 and player_2_location < 100:
                 if not current_player_turn:
