@@ -2,6 +2,9 @@
 def chance(chance_number):
     #global turn
     
+    if chance_number == 7:
+        chance_number = 1
+
     while True:
 
     # mom hurts you, you lose scrap
@@ -47,10 +50,11 @@ def chance(chance_number):
             if player_choice == 'y':
                 print('''You try to pick the item up,
                 It's a gas mask!
-                you can keep going for a while longer now.''')
+                There's some scrap in it.
+                You can keep going for a while longer now.''')
                 # extra turn
 
-                reward = 0
+                reward = 10
                 return reward
             elif player_choice == 'n':
                 print('''You leave the item''')
