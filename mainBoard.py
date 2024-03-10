@@ -33,7 +33,7 @@ def player_turn():
     global turn, question_tiles
 
     # player 1
-    global player_1_location, player_1_scrap
+    global player_1_location, player_1_scrap, chance_number
     if turn % 2 == 0:
         print('Player 1')
         print(f"You rolled a {outcome}")
@@ -70,9 +70,9 @@ def player_turn():
 
         # Chance encounters
         elif player_1_location in chance_tiles: 
-            print("event!")
             chance_number += 1
-            Chance.chance(chance_number)
+            player_1_scrap += Chance.chance(chance_number)
+            print(f"You now have {player_1_scrap} scrap")
 
 
         # snakes
@@ -157,6 +157,12 @@ def player_turn():
                 else:
                     print('Invalid input')
 
+        # Chance encounters
+        elif player_2_location in chance_tiles: 
+            chance_number += 1
+            player_2_scrap += Chance.chance(chance_number)
+            print(f"You now have {player_2_scrap} scrap")
+
         # snakes
         elif player_2_location == 45:
             print('''
@@ -223,7 +229,13 @@ if __name__ == '__main__':
                 roll_prompt = input("Press Enter to roll your dice!")
                 outcome = dice()
                 os.system('cls')
-                player_turn()  
+                player_turn()
+
+                #scrap can't fall below 0
+                if player_1_scrap < 0:
+                    player_1_scrap = 0 
+                if player_2_scrap < 0:
+                    player_2_scrap = 0
 
                 print(f'Player 1 location: Tile {player_1_location}')  
                 print(f'Player 2 location: Tile {player_2_location}') 
