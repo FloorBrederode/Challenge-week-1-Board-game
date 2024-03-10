@@ -95,7 +95,6 @@ def player_turn():
             print(f"You now have {player_1_scrap} scrap")
             chance_number += 1
 
-
         # snakes
         elif player_1_location == 45:
             print('''
@@ -135,7 +134,7 @@ def player_turn():
             You get: {item_given}''')
             print(item_given)
             player_1_list.append(item_given)
-            print(player_1_list)
+            print(f'Your inventory: {player_1_list}')
 
     # player 2
     global player_2_list, player_2_location, player_2_scrap
@@ -238,7 +237,7 @@ def player_turn():
             You get: {item_given}''')
             print(item_given)
             player_2_list.append(item_given)
-            print(player_2_list)
+            print(f'Your inventory: {player_2_list}')
         
 
 
