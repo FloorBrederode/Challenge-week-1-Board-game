@@ -70,9 +70,9 @@ def player_turn():
 
         # Chance encounters
         elif player_1_location in chance_tiles: 
-            chance_number += 1
             player_1_scrap += Chance.chance(chance_number)
             print(f"You now have {player_1_scrap} scrap")
+            chance_number += 1
 
 
         # snakes
@@ -159,9 +159,9 @@ def player_turn():
 
         # Chance encounters
         elif player_2_location in chance_tiles: 
-            chance_number += 1
             player_2_scrap += Chance.chance(chance_number)
             print(f"You now have {player_2_scrap} scrap")
+            chance_number += 1
 
         # snakes
         elif player_2_location == 45:
