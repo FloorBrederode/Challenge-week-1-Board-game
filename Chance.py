@@ -94,5 +94,3 @@ def chance(chance_number):
                 print('''You leave it laying on the ground''')
             else:
                 print('Invalid input')
-
-chance(1)
