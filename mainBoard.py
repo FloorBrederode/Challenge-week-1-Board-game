@@ -31,10 +31,10 @@ def move_player(player_location, outcome):
     return player_location
 
 def player_turn():
-    global turn, question_tiles
+    global turn, question_tiles, chance_number
 
     # player 1
-    global player_1_location, player_1_scrap, chance_number, player_1_list
+    global player_1_location, player_1_scrap, player_1_list
     if turn % 2 == 0:
         print('Player 1')
         print(f"You rolled a {outcome}")
@@ -124,6 +124,37 @@ def player_turn():
             You go back to tile 75.
             ''')
             player_1_location = 75
+
+        #ladders
+        elif player_1_location == 13:
+            print('''
+            NICE!
+            You landed on a ladder!
+            You go to tile 32.
+            ''')
+            player_1_location = 32
+        elif player_1_location == 17:
+            print('''
+            NICE!
+            You landed on a ladder!
+            You go to tile 39.
+            ''')
+            player_1_location = 39
+        elif player_1_location == 46:
+            print('''
+            NICE!
+            You landed on a ladder!
+            You go to tile 56.
+            ''')
+            player_1_location = 56
+        elif player_1_location == 67:
+            print('''
+            NICE!
+            You landed on a ladder!
+            You go to tile 88.
+            ''')
+            player_1_location = 88
+        
 
         # Random item
         elif player_1_location in random_item:
@@ -228,6 +259,36 @@ def player_turn():
             ''')
             player_2_location = 75
 
+        #ladders
+        elif player_2_location == 13:
+            print('''
+            NICE!
+            You landed on a ladder!
+            You go to tile 32.
+            ''')
+            player_2_location = 32
+        elif player_2_location == 17:
+            print('''
+            NICE!
+            You landed on a ladder!
+            You go to tile 39.
+            ''')
+            player_2_location = 39
+        elif player_2_location == 46:
+            print('''
+            NICE!
+            You landed on a ladder!
+            You go to tile 56.
+            ''')
+            player_2_location = 56
+        elif player_2_location == 67:
+            print('''
+            NICE!
+            You landed on a ladder!
+            You go to tile 88.
+            ''')
+            player_2_location = 88
+
         # Random item
         elif player_2_location in random_item:
             item_given = randomitem.random_item()
@@ -255,8 +316,8 @@ if __name__ == '__main__':
             player_1_location = 1
             player_2_location = 1
             # starting scrap
-            player_1_scrap = 0
-            player_2_scrap = 0
+            player_1_scrap = 25
+            player_2_scrap = 25
             # make lists for both players so they can collect clothes
             player_1_list = []
             player_2_list = []
@@ -288,9 +349,8 @@ if __name__ == '__main__':
                 if player_2_scrap < 0:
                     player_2_scrap = 0
                 
-                
-                print(f'Player 1 location: Tile {player_1_location}')  
-                print(f'Player 2 location: Tile {player_2_location}') 
+                print(f'Player 1 location: Tile {player_1_location}')
+                print(f'Player 2 location: Tile {player_2_location}')
                 turn += 1            
                 continue                     
         elif user_start == 'n':
